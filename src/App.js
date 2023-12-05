@@ -1,20 +1,17 @@
 import React, { Fragment, useState } from "react";
 import InputScreen from "./Components/InputScreen";
 import TableComponent from "./Components/TableComponent";
-import "./App.css";
-import LoadingSpinner from "./Components/Spinner";
 import LinearWithValueLabel from "./Components/ProgressBar";
-import CircularWithValueLabel from "./Components/ProgressBar";
+import "./App.css";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
   const [progress, setProgress] = useState(0)
   const [formData, setFormdata] = useState({});
+
+
   const handleFormSubmit = (formData) => {
-
-
-    console.log(formData)
     setLoading(true);
     setFormdata(formData);
     fetch("http://127.0.0.1:3002/progress", {
@@ -53,15 +50,11 @@ const App = () => {
           alert(error);
         });
     }, 100000);
-    // setLoading(true);
-    // setFormdata(formData);
   };
-  console.log(response)
 
   return (
 
     <Fragment>
-      {/* <Titlebar /> */}
       <div>
         {loading ? (
           <div>

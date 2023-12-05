@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
@@ -28,14 +28,12 @@ LinearProgressWithLabel.propTypes = {
 };
 
 export default function LinearWithValueLabel({totalprogress}) {
-  const [progress, setProgress] = React.useState(10);
+  const [progress, setProgress] = useState(10);
 
-  const totalprogresss = totalprogress
-
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => (prevProgress >= 95 ? 95 : prevProgress + (0.001)));
-    }, totalprogresss*100000000000);
+    }, totalprogress*100000000000);
     return () => {
       clearInterval(timer);
     };

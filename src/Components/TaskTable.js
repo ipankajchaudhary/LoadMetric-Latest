@@ -1,10 +1,10 @@
 import React from 'react'
-import 'react-tabulator/lib/styles.css' // default theme
-import 'react-tabulator/css/bootstrap/tabulator_bootstrap.min.css' // use Theme(s)
-
 import { ReactTabulator, reactFormatter } from 'react-tabulator'
+import 'react-tabulator/lib/styles.css' 
+import 'react-tabulator/css/bootstrap/tabulator_bootstrap.min.css' 
 
-function SimpleButton(props) {
+
+function RenderVariance(props) {
 
   const cellValue = props.cell._cell.value
 
@@ -46,12 +46,11 @@ class TaskTable extends React.Component {
           title: 'Change in Load Time',
           field: 'ChangeinLoadTime',
           width: 200,
-          formatter: reactFormatter(<SimpleButton />)
+          formatter: reactFormatter(<RenderVariance />)
         }
       )
     }
 
-    // Add the remaining columns
     baseColumns.push(
       { title: 'Report Name', field: 'ReportName', width: 150 },
       { title: 'Page Name', field: 'PageName', width: 175 },
@@ -62,9 +61,6 @@ class TaskTable extends React.Component {
     return baseColumns
   }
 
-  rowClick = (e, row) => {
-    this.setState({ selectedName: row.getData().name })
-  }
 
   setData = () => {
     this.setState(this.props.data)
@@ -82,16 +78,11 @@ class TaskTable extends React.Component {
         row.getElement().style.backgroundColor = 'red'
       }
     }
-    const options = {
-      height: 200,
-      movableRows: true,
-      movableColumns: true
-    }
 
     return (
       <div className="mt-5 mx-2 border">
         <ReactTabulator
-          columns={this.getColumns()} // Use the dynamically generated columns
+          columns={this.getColumns()} 
           data={this.props.data}
           footerElement={<span>Footer</span>}
           rowFormatter={rowFormatter}

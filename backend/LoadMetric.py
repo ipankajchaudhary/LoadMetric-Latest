@@ -36,48 +36,44 @@ CORS(app, origins=['http://localhost:3000'],
 
 
 class Parser:
-    def __init__(self, filename):
-        self.filename = filename
+    def __init__(self, fileName):
+        self.fileName = fileName
         pass
 
     def parse(self):
-        shutil.copyfile(self.filename, self.filename[:-5] + "(1).pbix")
+        shutil.copyfile(self.fileName, self.fileName[:-5] + "(1).pbix")
 
-        self.filename = self.filename[:-5] + "(1).pbix"
-        base = os.path.splitext(self.filename)[0]
+        self.fileName = self.fileName[:-5] + "(1).pbix"
+        base = os.path.splitext(self.fileName)[0]
 
         # zipping the file
-        os.rename(self.filename, base + ".zip")
+        os.rename(self.fileName, base + ".zip")
 
         # unzipping the file
-        with ZipFile(self.filename[:-5] + ".zip", 'r') as zip:
+        with ZipFile(self.fileName[:-5] + ".zip", 'r') as zip:
             zip.extractall()
 
         base = os.path.splitext("Report\Layout")[0]
-        old_file_path = "Report\\Layout"
-        new_file_path = base + ".txt"
+        oldFilePath = "Report\\Layout"
+        newFilePath = base + ".txt"
 
-        if os.path.exists(new_file_path):
-            os.remove(new_file_path)
+        if os.path.exists(newFilePath):
+            os.remove(newFilePath)
 
-        os.rename(old_file_path, new_file_path)
+        os.rename(oldFilePath, newFilePath)
 
         with open("Report\Layout.txt", "rb") as user_file:
-            file_contents = json.loads(user_file.read())
+            fileContents = json.loads(user_file.read())
 
-        length = len(file_contents['sections'])
-        f = open("OUTPUT.txt", "w")
-        g = open("data.txt","w")
-        f.write("PageName,VisualName,MeasureName,ColumnName,DimensionName,VisualTitle")
-        f.write("\n")
-        dictt = []
-        for i in range(0, length):
-            length2 = len(file_contents['sections'][i]['visualContainers'])
-            PageNames = file_contents['sections'][i]['displayName']
-            for j in range(0, length2):
+        pages = len(fileContents['sections'])
+        parserArray = []
+        for i in range(0, pages):
+            totalVisuals = len(fileContents['sections'][i]['visualContainers'])
+            PageNames = fileContents['sections'][i]['displayName']
+            for j in range(0, totalVisuals):
                 try:
-                    data = json.loads(file_contents['sections'][i]['visualContainers'][j]['config'])[
-                        'singleVisual']  # ['projections']
+                    data = json.loads(fileContents['sections'][i]['visualContainers'][j]['config'])[
+                        'singleVisual']  
                     if (data["visualType"] == "textbox"):
                         continue
                     CapturedVisualName = data["visualType"]
@@ -91,7 +87,6 @@ class Parser:
                     except Exception as e:
                         print(e)
                     data = data["prototypeQuery"]["Select"]
-                    g.write(str(data) + "\n")
                     t = len(data)
                     ColumnList = []
                     MeasureList = []
@@ -112,118 +107,113 @@ class Parser:
                             MeasureList.append(data[z]["Measure"]["Property"])
                     for w in range(0,len(MeasureList)):
                         if(len(ColumnList) == 0):
-                            singlerow = {}
-                            singlerow["PageName"] = PageNames
-                            singlerow["VisualName"] = CapturedVisualName
-                            singlerow["MeasureName"] = MeasureList[w]
-                            singlerow["ColumnName"] = ""
-                            singlerow["DimensionName"] = ""
-                            singlerow["VisualTitle"] = CapturedVisualTitle
-                            dictt.append(singlerow)
+                            parserTemp = {}
+                            parserTemp["PageName"] = PageNames
+                            parserTemp["VisualName"] = CapturedVisualName
+                            parserTemp["MeasureName"] = MeasureList[w]
+                            parserTemp["ColumnName"] = ""
+                            parserTemp["DimensionName"] = ""
+                            parserTemp["VisualTitle"] = CapturedVisualTitle
+                            parserArray.append(parserTemp)
                         else:
 
                             for e in range(0,len(ColumnList)):
-                                singlerow = {}
-                                singlerow["PageName"] = PageNames
-                                singlerow["VisualName"] = CapturedVisualName
-                                singlerow["MeasureName"] = MeasureList[w]
-                                singlerow["ColumnName"] = ColumnList[e]
-                                singlerow["DimensionName"] = DimensionList[e]
-                                singlerow["VisualTitle"] = CapturedVisualTitle
-                                dictt.append(singlerow)
+                                parserTemp = {}
+                                parserTemp["PageName"] = PageNames
+                                parserTemp["VisualName"] = CapturedVisualName
+                                parserTemp["MeasureName"] = MeasureList[w]
+                                parserTemp["ColumnName"] = ColumnList[e]
+                                parserTemp["DimensionName"] = DimensionList[e]
+                                parserTemp["VisualTitle"] = CapturedVisualTitle
+                                parserArray.append(parserTemp)
                                 
 
                 except KeyError as e:
                     print(e)
-        f.close()
-        g.close()
-        df = pd.DataFrame(dictt)
-        df.to_csv("ResultTable.csv", index=False)
+        df = pd.DataFrame(parserArray)
         df.drop_duplicates(inplace=True)
-        try:
-            os.remove("DataModel")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("Connections")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("DiagramLayout")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("[Content_Types].xml")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("DiagramState")
-        except Exception:
-            print("\n")
-        try:
-            os.remove(self.filename[:-5] + ".zip")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("Metadata")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("SecurityBindings")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("Settings")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("ResultTable")
-        except Exception:
-            print("\n")
-        try:
-            os.remove("OUTPUT.txt")
-        except Exception:
-            print("\n")
+        # try:
+        #     os.remove("DataModel")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("Connections")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("DiagramLayout")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("[Content_Types].xml")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("DiagramState")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove(self.fileName[:-5] + ".zip")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("Metadata")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("SecurityBindings")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("Settings")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("ResultTable")
+        # except Exception:
+        #     print("\n")
+        # try:
+        #     os.remove("OUTPUT.txt")
+        # except Exception:
+        #     print("\n")
         return df
 
 
 
 class QueryExecutor:
-    def __init__(self, threshold_time, connection_string, df):
+    def __init__(self, thresholdTime, connectionString, df):
         self.num_threads = 5
-        self.threshold_time = threshold_time
-        self.connection_string = connection_string
+        self.thresholdTime = thresholdTime
+        self.connectionString = connectionString
         self.res = []
         self.df = df
-        self.count = 0
-        self.unique_queries = {}
 
-    def process_query(self, query, i):
+    def processQuery(self, query, i):
         try:
-            con = Pyadomd(self.connection_string)
+            con = Pyadomd(self.connectionString)
             con.open()
-            start_time = time.time()
+            startTime = time.time()
             print("Currently running : " + query + "\n")
             result = con.cursor().execute(query)
             dftemp = pd.DataFrame(result.fetchone())
             self.count = self.count + 1
-            end_time = time.time()
-            elapsed_time = end_time - start_time
-            if elapsed_time >= float(self.threshold_time):
+            endTime = time.time()
+            elapsedTime = endTime - startTime
+            if elapsedTime >= float(self.thresholdTime):
                 print(
-                    f"Query {query} took too long to execute ({elapsed_time}). Aborting query...")
+                    f"Query {query} took too long to execute ({elapsedTime}). Aborting query...")
                 con.close()
-                return self.threshold_time
+                return self.thresholdTime
             else:
                 con.close()
-                return f"{elapsed_time:0.12f}"
+                return f"{elapsedTime:0.12f}"
         except Exception as e:
             print(e)
             return None
 
-    def execute_queries(self, df):
+    def executeQuery(self, df):
         with concurrent.futures.ThreadPoolExecutor(max_workers=self.num_threads) as executor:
-            futures = [executor.submit(self.process_query, query, i)
+            futures = [executor.submit(self.processQuery, query, i)
                        for i, query in enumerate(df["Query"])]
             for i, future in enumerate(concurrent.futures.as_completed(futures)):
                 result = future.result()
@@ -234,25 +224,23 @@ class QueryExecutor:
 
 
 class LoadTimeChecker:
-    def __init__(self, modelname, endpoint, connectionstring, checkforlocal, runningforfirsttime, parseddf, thresholdvalue):
-        self.modelname = modelname
+    def __init__(self, modelName, endpoint, connectionstring, checkforlocal, runningforfirsttime, parsedDataFrame, thresholdValue):
+        self.modelName = modelName
         self.endpoint = endpoint
         self.checkforlocal = checkforlocal
-        self.connection_string = ''
-        self.thresholdvalue = thresholdvalue
-        self.parseddf = parseddf
-        print(self.modelname, self.endpoint)
+        self.connectionString = ''
+        self.thresholdValue = thresholdValue
+        self.parsedDataFrame = parsedDataFrame
         if (self.checkforlocal == 'Y' or self.checkforlocal == 'y'):
-            self.connection_string = connectionstring
+            self.connectionString = connectionstring
         else:
-            self.PowerBIEndpoint = self.endpoint + ";initial catalog=" + self.modelname
+            self.PowerBIEndpoint = self.endpoint + ";initial catalog=" + self.modelName
             self.PowerBILogin = ""
             self.PowerBIPassword = ""
-            self.connection_string = "Provider=MSOLAP.8;Data Source=" + self.PowerBIEndpoint + \
+            self.connectionString = "Provider=MSOLAP.8;Data Source=" + self.PowerBIEndpoint + \
                 ";UID=" + self.PowerBILogin + ";PWD=" + self.PowerBIPassword
-        print(self.connection_string)
         self.runningforfirsttime = runningforfirsttime
-        self.con = Pyadomd(self.connection_string)
+        self.con = Pyadomd(self.connectionString)
 
     def MeasureListSQLQuery(self):
         self.con.open()
@@ -319,9 +307,9 @@ class LoadTimeChecker:
             query = row['ValuesQuery']
             try:
                 result = self.con.cursor().execute(query)
-                tempdf = pd.DataFrame(result.fetchone(), columns=["Count"])
-                df.at[i, 'Count'] = tempdf['Count'][0]
-                print(tempdf['Count'][0])
+                tempDF = pd.DataFrame(result.fetchone(), columns=["Count"])
+                df.at[i, 'Count'] = tempDF['Count'][0]
+                print(tempDF['Count'][0])
                 print("Column Values Count queries are running....")
                 self.con.close()
             except:
@@ -357,22 +345,22 @@ class LoadTimeChecker:
         MeanRowNumberdf['MeanRowNumber'] = MeanRowNumberdf['MeanRowNumber'].astype(
             int)
 
-        final_columns = []
+        finalColumns = []
 
         for index, row in RowNumberPerDimension.iterrows():
-            table_name = row['TableName']
-            column_name = row['ColumnName']
-            row_number = row['RowNumber']
+            tableName = row['TableName']
+            columnName = row['ColumnName']
+            rowNumber = row['RowNumber']
 
             for mean_row in MeanRowNumberdf.itertuples(self):
-                if table_name == mean_row.TableName and row_number == mean_row.MeanRowNumber:
-                    final_columns.append([table_name, column_name, row_number])
+                if tableName == mean_row.TableName and rowNumber == mean_row.MeanRowNumber:
+                    finalColumns.append([tableName, columnName, rowNumber])
                     break
 
-        final_df = pd.DataFrame(final_columns, columns=[
+        resultDataFrame = pd.DataFrame(finalColumns, columns=[
                                 'TableName', 'ColumnName', 'RowNumber'])
 
-        return final_df
+        return resultDataFrame
 
     def MeasureWithDimensionsQuery(self):
         TempMeasureCalculationQuery = self.MeasureListSQLQuery()
@@ -382,7 +370,7 @@ class LoadTimeChecker:
         FinalColumnsFromTables = self.FinalColumnsFromTablesQuery()
         Columns = self.ColumnsQuery()
 
-        measures_with_dimensions = pd.merge(
+        MeasuresWithDimensions = pd.merge(
             Relationships, Tables.rename(
                 columns={'TableID': 'FromTableID', 'TableName': 'FromTableName'}),
             on='FromTableID'
@@ -406,7 +394,7 @@ class LoadTimeChecker:
             FinalColumnsFromTables, left_on=['ToTableName'], right_on=['TableName']
         )
 
-        return measures_with_dimensions
+        return MeasuresWithDimensions
 
     def MeasureTimeWithoutDimensionsQuery(self):
         MeasureTimeWithoutDimensions = pd.DataFrame()
@@ -425,13 +413,13 @@ class LoadTimeChecker:
 
     def MeasureTimeWithDimensionsQuery(self):
         MeasureTimeWithDimensions = pd.DataFrame()
-        measures_with_dimensions = self.MeasureWithDimensionsQuery()
-        MeasureTimeWithDimensions['Measure'] = measures_with_dimensions['Measure']
-        MeasureTimeWithDimensions['MeasureGroup'] = measures_with_dimensions['MeasureGroup']
-        MeasureTimeWithDimensions['EXPRESSION'] = measures_with_dimensions['EXPRESSION']
-        MeasureTimeWithDimensions['CubeName'] = measures_with_dimensions['CubeName']
-        MeasureTimeWithDimensions['ColumnName'] = measures_with_dimensions['ColumnName']
-        MeasureTimeWithDimensions['DimensionName'] = measures_with_dimensions['ToTableName']
+        MeasuresWithDimensions = self.MeasureWithDimensionsQuery()
+        MeasureTimeWithDimensions['Measure'] = MeasuresWithDimensions['Measure']
+        MeasureTimeWithDimensions['MeasureGroup'] = MeasuresWithDimensions['MeasureGroup']
+        MeasureTimeWithDimensions['EXPRESSION'] = MeasuresWithDimensions['EXPRESSION']
+        MeasureTimeWithDimensions['CubeName'] = MeasuresWithDimensions['CubeName']
+        MeasureTimeWithDimensions['ColumnName'] = MeasuresWithDimensions['ColumnName']
+        MeasureTimeWithDimensions['DimensionName'] = MeasuresWithDimensions['ToTableName']
         MeasureTimeWithDimensions['Query'] = 'SELECT {[Measures].[' + MeasureTimeWithDimensions['Measure'] + ']} ON 0 ,NON EMPTY{[' + \
             MeasureTimeWithDimensions['DimensionName'] + '].[' + MeasureTimeWithDimensions['ColumnName'] + \
             '].children} ON 1 FROM [' + \
@@ -440,7 +428,7 @@ class LoadTimeChecker:
 
         return MeasureTimeWithDimensions
 
-    def get_load_time(self):
+    def get_loadTime(self):
 
         MeasuresWithDimensions = self.MeasureTimeWithDimensionsQuery()
         MeasuresWithoutDimensions = self.MeasureTimeWithoutDimensionsQuery()
@@ -462,78 +450,75 @@ class LoadTimeChecker:
         MeasuresWithoutDimensions['ReportName'] = "-"
         MeasuresWithoutDimensions["hasDimension"] = "0"
 
-        self.parseddf['LoadTime'] = "x"
-        self.parseddf['isMeasureUsedInVisual'] = "1"
-        self.parseddf['hasDimension'] = '0'
+        self.parsedDataFrame['LoadTime'] = "x"
+        self.parsedDataFrame['isMeasureUsedInVisual'] = "1"
+        self.parsedDataFrame['hasDimension'] = '0'
 
-        self.parseddf.rename(columns={'MeasureName': 'Measure'}, inplace=True)
-
-
-        self.parseddf['Query'] = ''
+        self.parsedDataFrame.rename(columns={'MeasureName': 'Measure'}, inplace=True)
+        self.parsedDataFrame['Query'] = ''
         
-        for i, row in self.parseddf.iterrows():
+        for i, row in self.parsedDataFrame.iterrows():
             if(row["ColumnName"] == ""):
-                self.parseddf['Query'] = 'SELECT {[Measures].[' + self.parseddf['Measure'] + ']} ON 0 FROM [' + \
+                self.parsedDataFrame['Query'] = 'SELECT {[Measures].[' + self.parsedDataFrame['Measure'] + ']} ON 0 FROM [' + \
                     MeasuresWithDimensions['CubeName'][0] + "]"
             else:
-                self.parseddf['Query'] = 'SELECT {[Measures].[' + self.parseddf['Measure'] + ']} ON 0 ,NON EMPTY{[' + \
-                    self.parseddf['DimensionName'] + '].[' + self.parseddf['ColumnName'] + \
+                self.parsedDataFrame['Query'] = 'SELECT {[Measures].[' + self.parsedDataFrame['Measure'] + ']} ON 0 ,NON EMPTY{[' + \
+                    self.parsedDataFrame['DimensionName'] + '].[' + self.parsedDataFrame['ColumnName'] + \
                     '].children} ON 1 FROM [' + \
                     MeasuresWithDimensions['CubeName'][0] + "]"
                 
 
-        self.parseddf.to_csv("PossibleCombinations.csv")
-        tempdf = self.parseddf.groupby('Measure')
-        tempdf = tempdf.first()
+        tempDF = self.parsedDataFrame.groupby('Measure')
+        tempDF = tempDF.first()
 
-        df = tempdf.merge(MeasuresWithoutDimensions, indicator=True, on="Measure", how='outer').query(
+        mergedDF = tempDF.merge(MeasuresWithoutDimensions, indicator=True, on="Measure", how='outer').query(
             '_merge != "both"').drop(labels='_merge', axis=1)
-        df.drop(columns=['PageName_x', 'VisualName_x', 'LoadTime_x','VisualTitle_x','VisualTitle_y',
+        mergedDF.drop(columns=['PageName_x', 'VisualName_x', 'LoadTime_x','VisualTitle_x','VisualTitle_y',
                          'isMeasureUsedInVisual_x', 'CubeName',
                          'isMeasureUsedInVisual_y', 'PageName_y', 'VisualName_y', 'Query_x'], inplace=True)
-        df['isMeasureUsedInVisual'] = '0'
-        df['PageName'] = "-"
-        df['VisualName'] = "-"
-        df['VisualTitle'] = "-"
-        df['ColumnName'] = "-"
-        df['DimensionName'] = "-"
-        df['hasDimension'] = '0'
-        df.rename(columns={'LoadTime_y': "LoadTime",
+        mergedDF['isMeasureUsedInVisual'] = '0'
+        mergedDF['PageName'] = "-"
+        mergedDF['VisualName'] = "-"
+        mergedDF['VisualTitle'] = "-"
+        mergedDF['ColumnName'] = "-"
+        mergedDF['DimensionName'] = "-"
+        mergedDF['hasDimension'] = '0'
+        mergedDF.rename(columns={'LoadTime_y': "LoadTime",
                   'Query_y': 'Query'}, inplace=True)
 
 
-        finaldf = pd.concat(
-            [self.parseddf, df, MeasuresWithDimensions], ignore_index=True, axis=0)
-        finaldf = finaldf.loc[:, ['Measure', 'DimensionName', 'ColumnName',
+        possibleCombinations = pd.concat(
+            [self.parsedDataFrame, mergedDF, MeasuresWithDimensions], ignore_index=True, axis=0)
+        possibleCombinations = possibleCombinations.loc[:, ['Measure', 'DimensionName', 'ColumnName',
                                   'LoadTime', 'isMeasureUsedInVisual','ReportName', 'PageName', 'VisualName', 'VisualTitle', 'Query','hasDimension']]
-        query_executor = QueryExecutor(
-            self.thresholdvalue, self.connection_string, finaldf)
-        query_executor.execute_queries(finaldf)
+        queryExecutorObject = QueryExecutor(
+            self.thresholdValue, self.connectionString, possibleCombinations)
+        queryExecutorObject.executeQuery(possibleCombinations)
         print("Queries execution completed\n")
 
         
 
         if (self.runningforfirsttime == True):
-            finaldf.to_csv("RES.csv", index=False)
+            possibleCombinations.to_csv("RES.csv", index=False)
         else:
-            previousloadtimedf = pd.read_csv("RES.csv")
-            finaldf['PreviousLoadTime'] = "0"
-            print(previousloadtimedf)
-            for j in previousloadtimedf.index:
-                for i in finaldf.index:
-                    if (finaldf['Query'][i] == previousloadtimedf['Query'][j]):
-                        finaldf.at[i, 'PreviousLoadTime'] = previousloadtimedf.at[j, 'LoadTime']
+            previousLoadTimeDataFrame = pd.read_csv("RES.csv")
+            possibleCombinations['PreviousLoadTime'] = "0"
+            print(previousLoadTimeDataFrame)
+            for j in previousLoadTimeDataFrame.index:
+                for i in possibleCombinations.index:
+                    if (possibleCombinations['Query'][i] == previousLoadTimeDataFrame['Query'][j]):
+                        possibleCombinations.at[i, 'PreviousLoadTime'] = previousLoadTimeDataFrame.at[j, 'LoadTime']
 
-            finaldf['ChangeinLoadTime'] = ""
-            for i in finaldf.index:
-                load_time = float(finaldf['LoadTime'][i])
-                prev_load_time = float(finaldf['PreviousLoadTime'][i])
-                change_in_load_time = load_time - prev_load_time
-                finaldf['ChangeinLoadTime'][i] = round(change_in_load_time, 9)
+            possibleCombinations['ChangeinLoadTime'] = ""
+            for i in possibleCombinations.index:
+                loadTime = float(possibleCombinations['LoadTime'][i])
+                prevLoadTime = float(possibleCombinations['PreviousLoadTime'][i])
+                changeinLoadTime = loadTime - prevLoadTime
+                possibleCombinations['ChangeinLoadTime'][i] = round(changeinLoadTime, 9)
 
-            finaldf.to_csv("RES.csv", index=False)
+            possibleCombinations.to_csv("RES.csv", index=False)
 
-        return [finaldf, self.connection_string]
+        return [possibleCombinations, self.connectionString]
 
 
 @app.route('/')
@@ -549,12 +534,12 @@ def get_data():
 
     singleFile = data["singleFile"]
     filepath = data["filePath"]
-    modelname = data["modelName"]
+    modelName = data["modelName"]
     endpoint = data["xmlaEndpoint"]
-    thresholdvalue = data["thresholdValue"]
+    thresholdValue = data["thresholdValue"]
     isFirstTime = data["isFirstTime"]
     checkforlocal = 'n'
-    connection_string = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=a105a363-e6db-4947-acf2-5b3078bdab89;Data Source=localhost:53624;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
+    connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=a105a363-e6db-4947-acf2-5b3078bdab89;Data Source=localhost:53624;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
     print(data)
 
     if(singleFile == True):
@@ -576,8 +561,8 @@ def get_data():
 
             shutil.copy2(file_name, new_folder_path)
 
-            new_file_path = os.path.join(new_folder_path, os.path.basename(file_name))
-            print("New file path:", new_file_path)
+            newFilePath = os.path.join(new_folder_path, os.path.basename(file_name))
+            print("New file path:", newFilePath)
             csv_path = new_folder_path + "\Res.csv"
             newfolderpaths.append(new_folder_path)
             parser = Parser(file_name)
@@ -602,23 +587,23 @@ def get_data():
 
 
     loadtimechecker = LoadTimeChecker(
-        modelname, endpoint, connection_string, checkforlocal, isFirstTime, parsed_df, thresholdvalue)
-    li = loadtimechecker.get_load_time()
+        modelName, endpoint, connectionString, checkforlocal, isFirstTime, parsed_df, thresholdValue)
+    li = loadtimechecker.get_loadTime()
 
     df = li[0]
     filen, extension = os.path.splitext(os.path.basename(data['filePath']))
 
-    connection_string = li[1]
+    connectionString = li[1]
 
     result = "{" '\"result\": ' + df.to_json(
-        orient='records') + "," + '\"connection_string\": ' + '"' + str(connection_string) + '"' + "}"
+        orient='records') + "," + '\"connectionString\": ' + '"' + str(connectionString) + '"' + "}"
 
     return jsonify(result)
 
 
 
 def list_power_bi_files():
-    dictt = {
+    parserArray = {
         'filepath' : []
     }
     for process in psutil.process_iter(['pid', 'name', 'cmdline']):
@@ -626,8 +611,8 @@ def list_power_bi_files():
             cmdline = process.info['cmdline']
             file_paths = [arg for arg in cmdline if arg.lower().endswith('.pbix')]
             if file_paths:
-                dictt['filepath'].append(file_paths)
-    return dictt
+                parserArray['filepath'].append(file_paths)
+    return parserArray
 
 @app.route('/getreport', methods=['GET'])
 def get_report():
@@ -644,12 +629,12 @@ def get_progress():
 
     singleFile = data["singleFile"]
     filepath = data["filePath"]
-    modelname = data["modelName"]
+    modelName = data["modelName"]
     endpoint = data["xmlaEndpoint"]
-    thresholdvalue = data["thresholdValue"]
+    thresholdValue = data["thresholdValue"]
     isFirstTime = data["isFirstTime"]
     checkforlocal = 'n'
-    connection_string = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=a105a363-e6db-4947-acf2-5b3078bdab89;Data Source=localhost:53624;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
+    connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=a105a363-e6db-4947-acf2-5b3078bdab89;Data Source=localhost:53624;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
     print(data)
 
     if(singleFile == True):
@@ -671,8 +656,8 @@ def get_progress():
 
             shutil.copy2(file_name, new_folder_path)
 
-            new_file_path = os.path.join(new_folder_path, os.path.basename(file_name))
-            print("New file path:", new_file_path)
+            newFilePath = os.path.join(new_folder_path, os.path.basename(file_name))
+            print("New file path:", newFilePath)
             csv_path = new_folder_path + "\Res.csv"
             newfolderpaths.append(new_folder_path)
             parser = Parser(file_name)
@@ -691,7 +676,7 @@ def get_progress():
         parsed_df = pd.concat(df_list)
 
     loadtimechecker = LoadTimeChecker(
-        modelname, endpoint, connection_string, checkforlocal, isFirstTime, parsed_df, thresholdvalue)
+        modelName, endpoint, connectionString, checkforlocal, isFirstTime, parsed_df, thresholdValue)
     li = loadtimechecker.ColumnValuesCountQueryforprogress()
 
     result = "{" '\"result\": ' + '"' + str(li) + '"' + "}"

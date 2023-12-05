@@ -138,6 +138,10 @@ option {
   flex-direction: column;
   align-items: center;
 } */
+.dropdowns {
+  display: flex;
+  justify-content: space-between;
+}
 
 .App {
   font-family: sans-serif;  
