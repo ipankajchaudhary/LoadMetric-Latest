@@ -1,0 +1,30 @@
+PageName,VisualName,MeasureName,ColumnName,DimensionName,VisualTitle
+Read Me,card,CurrentDatePST,,,
+Ingestion Pipeline Logs,card,CurrentDatePST,,,
+Ingestion Pipeline Logs,tableEx,LastTimeRefresh(MAX) Ingestion(PST),StreamName,meta PipelineExecutionLogs,Controllable On-Time Performance for:
+Ingestion Pipeline Logs,tableEx,LastTimeRefresh(MAX) Ingestion(PST),PipelineName,meta PipelineExecutionLogs,Controllable On-Time Performance for:
+Ingestion Pipeline Logs,tableEx,LastTimeRefresh(MAX) Ingestion(PST),Stage Name,meta PipelineExecutionLogs,Controllable On-Time Performance for:
+Ingestion Pipeline Backup Logs,card,CurrentDatePST,,,
+Summary Logs,card,CurrentDatePST,,,
+Summary Logs,tableEx,CurrentStatus(MAX),Mappedcolumns,pipelineexecutionlogs,Controllable On-Time Performance for:
+Summary Logs,tableEx,CombineDate,Mappedcolumns,pipelineexecutionlogs,Controllable On-Time Performance for:
+Pipeline Backup Logs,card,CurrentDatePST,,,
+Pipeline Backup Logs,tableEx,ColorCode_BackupPipelineExecutionlogs,PipelineName,backuppipelineexecutionlogs,Controllable On-Time Performance for:
+Pipeline Backup Logs,tableEx,ColorCode_BackupPipelineExecutionlogs,StageName,backuppipelineexecutionlogs,Controllable On-Time Performance for:
+Pipeline Backup Logs,tableEx,ColorCode_BackupPipelineExecutionlogs,MappedColumn,backuppipelineexecutionlogs,Controllable On-Time Performance for:
+Pipeline Backup Logs,tableEx,ColorCode_BackupPipelineExecutionlogs,RefreshTime(PST),backuppipelineexecutionlogs,Controllable On-Time Performance for:
+Dataset Logs,card,CurrentDatePST,,,
+Dataset Logs,tableEx,CurrentDuration,EndTime(PST),datasetrefreshhistory,Controllable On-Time Performance for:
+Dataset Logs,tableEx,CurrentDuration,StartTime(PST),datasetrefreshhistory,Controllable On-Time Performance for:
+Dataset Logs,tableEx,CurrentDuration,ID,CountNonNull(datasetrefreshhistory,Controllable On-Time Performance for:
+Dataset Logs,tableEx,CurrentDuration,RefreshType,datasetrefreshhistory,Controllable On-Time Performance for:
+Dataset Logs,tableEx,CurrentDuration,MappedDatasetName,Dataset Refresh History,Controllable On-Time Performance for:
+Summary Detailed Logs,pivotTable,Last Refresh Time Ingestion,StreamName,Stream Name Dimension Ingestion,
+Summary Detailed Logs,pivotTable,Last Refresh Time Ingestion,Stage Name,meta PipelineExecutionLogs,
+Summary Detailed Logs,tableEx,EndTime(MAX),MappedDatasetName,Dataset Refresh History,DC Result
+Summary Detailed Logs,tableEx,CurrentDuration,MappedDatasetName,Dataset Refresh History,DC Result
+Summary Detailed Logs,tableEx,StartTime(MAX),MappedDatasetName,Dataset Refresh History,DC Result
+Summary Detailed Logs,card,CurrentDatePST,,,
+Summary Detailed Logs,pivotTable,DateShow,StageName,pipelineexecutionlogs,
+Summary Detailed Logs,pivotTable,DateShow,Mappedcolumns,Dim2,
+Pipeline Logs,card,CurrentDatePST,,,

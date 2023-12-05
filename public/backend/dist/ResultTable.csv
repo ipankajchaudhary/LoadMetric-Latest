@@ -1,0 +1,19 @@
+PageName,VisualName,MeasureName
+Read Me,card,CurrentDatePST
+Ingestion Pipeline Logs,card,CurrentDatePST
+Ingestion Pipeline Logs,tableEx,LastTimeRefresh(MAX) Ingestion(PST)
+Ingestion Pipeline Backup Logs,card,CurrentDatePST
+Summary Logs,card,CurrentDatePST
+Summary Logs,tableEx,CurrentStatus(MAX)
+Summary Logs,tableEx,CombineDate
+Pipeline Backup Logs,card,CurrentDatePST
+Pipeline Backup Logs,tableEx,ColorCode_BackupPipelineExecutionlogs
+Dataset Logs,card,CurrentDatePST
+Dataset Logs,tableEx,CurrentDuration
+Summary Detailed Logs,pivotTable,Last Refresh Time Ingestion
+Summary Detailed Logs,tableEx,EndTime(MAX)
+Summary Detailed Logs,tableEx,CurrentDuration
+Summary Detailed Logs,tableEx,StartTime(MAX)
+Summary Detailed Logs,card,CurrentDatePST
+Summary Detailed Logs,pivotTable,DateShow
+Pipeline Logs,card,CurrentDatePST

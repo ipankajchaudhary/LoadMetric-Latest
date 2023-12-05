@@ -1,0 +1,72 @@
+Measure,DimensionName,ColumnName,LoadTime,isMeasureUsedInVisual,ReportName,PageName,VisualName,VisualTitle,Query,hasDimension
+CurrentDuration,Dataset Refresh History,MappedDatasetName,0.279779672623,1,Refresh Tracker (3),Dataset Logs,tableEx,Controllable On-Time Performance for:,"SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]",0
+Last Refresh Time Ingestion,meta PipelineExecutionLogs,Stage Name,0.273612260818,1,Refresh Tracker (3),Summary Detailed Logs,pivotTable,,"SELECT {[Measures].[Last Refresh Time Ingestion]} ON 0 ,NON EMPTY{[meta PipelineExecutionLogs].[Stage Name].children} ON 1 FROM [Model]",0
+EndTime(MAX),Dataset Refresh History,MappedDatasetName,0.269986629486,1,Refresh Tracker (3),Summary Detailed Logs,tableEx,DC Result,"SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]",0
+CurrentDuration,Dataset Refresh History,MappedDatasetName,0.267678260803,1,Refresh Tracker (3),Summary Detailed Logs,tableEx,DC Result,"SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]",0
+DateShow,pipelineexecutionlogs,StageName,0.267494440079,1,Refresh Tracker (3),Summary Detailed Logs,pivotTable,,"SELECT {[Measures].[DateShow]} ON 0 ,NON EMPTY{[pipelineexecutionlogs].[StageName].children} ON 1 FROM [Model]",0
+CurrentDuration,Dataset Refresh History,MappedDatasetName,0.273218154907,1,Refresh Tracker (3) - Copy - for testing,Dataset Logs,tableEx,Controllable On-Time Performance for:,"SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]",0
+Last Refresh Time Ingestion,meta PipelineExecutionLogs,Stage Name,0.271190166473,1,Refresh Tracker (3) - Copy - for testing,Summary Detailed Logs,pivotTable,,"SELECT {[Measures].[Last Refresh Time Ingestion]} ON 0 ,NON EMPTY{[meta PipelineExecutionLogs].[Stage Name].children} ON 1 FROM [Model]",0
+EndTime(MAX),Dataset Refresh History,MappedDatasetName,0.271387100220,1,Refresh Tracker (3) - Copy - for testing,Summary Detailed Logs,tableEx,DC Result,"SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]",0
+CurrentDuration,Dataset Refresh History,MappedDatasetName,0.273739576340,1,Refresh Tracker (3) - Copy - for testing,Summary Detailed Logs,tableEx,DC Result,"SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]",0
+CurrentDatePST,,,0.257026672363,1,Refresh Tracker (3) - Copy - for testing,Summary Detailed Logs,card,,,0
+CurrentStatusLatest Ingestion,-,-,0.268650054932,0,,-,-,-,SELECT [Measures].[CurrentStatusLatest Ingestion] ON 0 FROM [Model],0
+CurrentStatus Ingestion,-,-,0.346905469894,0,,-,-,-,SELECT [Measures].[CurrentStatus Ingestion] ON 0 FROM [Model],0
+TodaysStatus,-,-,0.251093864441,0,,-,-,-,SELECT [Measures].[TodaysStatus] ON 0 FROM [Model],0
+ColorCode_DatasetRefreshHistory,-,-,0.263858556747,0,,-,-,-,SELECT [Measures].[ColorCode_DatasetRefreshHistory] ON 0 FROM [Model],0
+CurrentStatus,-,-,0.267953872681,0,,-,-,-,SELECT [Measures].[CurrentStatus] ON 0 FROM [Model],0
+NextScheduleRefresh,-,-,0.262309551239,0,,-,-,-,SELECT [Measures].[NextScheduleRefresh] ON 0 FROM [Model],0
+CombineStatus,-,-,0.280122041702,0,,-,-,-,SELECT [Measures].[CombineStatus] ON 0 FROM [Model],0
+ColorCode_SummaryPage,-,-,0.264587879181,0,,-,-,-,SELECT [Measures].[ColorCode_SummaryPage] ON 0 FROM [Model],0
+LastTimeRefresh(MAX) Ingestion,-,-,0.266258716583,0,,-,-,-,SELECT [Measures].[LastTimeRefresh(MAX) Ingestion] ON 0 FROM [Model],0
+LastTimeRefresh(MAX),-,-,0.266975641251,0,,-,-,-,SELECT [Measures].[LastTimeRefresh(MAX)] ON 0 FROM [Model],0
+ColorCode_BackupPipelinelogs,-,-,0.259205818176,0,,-,-,-,SELECT [Measures].[ColorCode_BackupPipelinelogs] ON 0 FROM [Model],0
+NextScheduleRefreshIngestion,-,-,0.306272983551,0,,-,-,-,SELECT [Measures].[NextScheduleRefreshIngestion] ON 0 FROM [Model],0
+MetaCurrentStatus(MAX),-,-,0.394582509995,0,,-,-,-,SELECT [Measures].[MetaCurrentStatus(MAX)] ON 0 FROM [Model],0
+MetaCombineStatus,-,-,0.425300121307,0,,-,-,-,SELECT [Measures].[MetaCombineStatus] ON 0 FROM [Model],0
+MetaCombineDate,-,-,0.313607692719,0,,-,-,-,SELECT [Measures].[MetaCombineDate] ON 0 FROM [Model],0
+LastTimeRefresh(MAX) IN,-,-,0.282770156860,0,,-,-,-,SELECT [Measures].[LastTimeRefresh(MAX) IN] ON 0 FROM [Model],0
+DateShow Ingestion,-,-,0.267367362976,0,,-,-,-,SELECT [Measures].[DateShow Ingestion] ON 0 FROM [Model],0
+ColorCode_SummaryPage Ingestion Framework,-,-,0.270904779434,0,,-,-,-,SELECT [Measures].[ColorCode_SummaryPage Ingestion Framework] ON 0 FROM [Model],0
+DateShow,Stream Name Dimension,StreamNameOrder,0.273894309998,0,-,-,-,-,"SELECT {[Measures].[DateShow]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+CurrentStatus(MAX),Stream Name Dimension,StreamNameOrder,0.485422611237,0,-,-,-,-,"SELECT {[Measures].[CurrentStatus(MAX)]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+NextScheduleRefresh,Stream Name Dimension,StreamNameOrder,0.528209924698,0,-,-,-,-,"SELECT {[Measures].[NextScheduleRefresh]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+CombineStatus,Stream Name Dimension,StreamNameOrder,0.545068979263,0,-,-,-,-,"SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+CombineDate,Stream Name Dimension,StreamNameOrder,0.281178236008,0,-,-,-,-,"SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+ColorCode_SummaryPage,Stream Name Dimension,StreamNameOrder,0.470033168793,0,-,-,-,-,"SELECT {[Measures].[ColorCode_SummaryPage]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+LastTimeRefresh(MAX),Stream Name Dimension,StreamNameOrder,0.283154249191,0,-,-,-,-,"SELECT {[Measures].[LastTimeRefresh(MAX)]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+DateShow Ingestion,Stream Name Dimension,StreamNameOrder,0.308796644211,0,-,-,-,-,"SELECT {[Measures].[DateShow Ingestion]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+Last Refresh Time Ingestion,Stream Name Dimension,StreamNameOrder,0.347807645798,0,-,-,-,-,"SELECT {[Measures].[Last Refresh Time Ingestion]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+LastTimeRefresh(MAX) Ingestion(PST),Stream Name Dimension,StreamNameOrder,0.325032949448,0,-,-,-,-,"SELECT {[Measures].[LastTimeRefresh(MAX) Ingestion(PST)]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]",1
+CombineStatus,Pipeline Execution Logs,StreamOrder,0.639872312546,0,-,-,-,-,"SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+CombineDate,Pipeline Execution Logs,StreamOrder,0.671633958817,0,-,-,-,-,"SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+StartTime(MAX),Pipeline Execution Logs,StreamOrder,0.318044424057,0,-,-,-,-,"SELECT {[Measures].[StartTime(MAX)]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+EndTime(MAX),Pipeline Execution Logs,StreamOrder,0.309488058090,0,-,-,-,-,"SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+CurrentDuration,Pipeline Execution Logs,StreamOrder,0.317749261856,0,-,-,-,-,"SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+ColorCode_DatasetRefreshHistory,Pipeline Execution Logs,StreamOrder,0.326311111450,0,-,-,-,-,"SELECT {[Measures].[ColorCode_DatasetRefreshHistory]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+CurrentStatus,Pipeline Execution Logs,StreamOrder,0.680147647858,0,-,-,-,-,"SELECT {[Measures].[CurrentStatus]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+MetaCombineDate,Pipeline Execution Logs,StreamOrder,0.622166872025,0,-,-,-,-,"SELECT {[Measures].[MetaCombineDate]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+MetaCombineStatus,Pipeline Execution Logs,StreamOrder,0.409347772598,0,-,-,-,-,"SELECT {[Measures].[MetaCombineStatus]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+CurrentStatus Ingestion,Pipeline Execution Logs,StreamOrder,0.493946552277,0,-,-,-,-,"SELECT {[Measures].[CurrentStatus Ingestion]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+CurrentStatusLatest Ingestion,Pipeline Execution Logs,StreamOrder,0.858441591263,0,-,-,-,-,"SELECT {[Measures].[CurrentStatusLatest Ingestion]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]",1
+CombineStatus,PipelineBackupLogs(Ingestion),StreamName,0.424189567566,0,-,-,-,-,"SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+CombineDate,PipelineBackupLogs(Ingestion),StreamName,0.267923116684,0,-,-,-,-,"SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+StartTime(MAX),PipelineBackupLogs(Ingestion),StreamName,0.404110193253,0,-,-,-,-,"SELECT {[Measures].[StartTime(MAX)]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+EndTime(MAX),PipelineBackupLogs(Ingestion),StreamName,0.270083665848,0,-,-,-,-,"SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+CurrentDuration,PipelineBackupLogs(Ingestion),StreamName,0.292385578156,0,-,-,-,-,"SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+ColorCode_DatasetRefreshHistory,PipelineBackupLogs(Ingestion),StreamName,0.266451120377,0,-,-,-,-,"SELECT {[Measures].[ColorCode_DatasetRefreshHistory]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+CurrentStatus,PipelineBackupLogs(Ingestion),StreamName,0.438922643661,0,-,-,-,-,"SELECT {[Measures].[CurrentStatus]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+MetaCombineDate,PipelineBackupLogs(Ingestion),StreamName,0.442571878433,0,-,-,-,-,"SELECT {[Measures].[MetaCombineDate]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+MetaCombineStatus,PipelineBackupLogs(Ingestion),StreamName,0.606836795807,0,-,-,-,-,"SELECT {[Measures].[MetaCombineStatus]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+CurrentStatus Ingestion,PipelineBackupLogs(Ingestion),StreamName,0.500319957733,0,-,-,-,-,"SELECT {[Measures].[CurrentStatus Ingestion]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+CurrentStatusLatest Ingestion,PipelineBackupLogs(Ingestion),StreamName,0.401468753815,0,-,-,-,-,"SELECT {[Measures].[CurrentStatusLatest Ingestion]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]",1
+CombineStatus,PipelineExecutionLogs(ingestion),Order,0.427055120468,0,-,-,-,-,"SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+CombineDate,PipelineExecutionLogs(ingestion),Order,0.273292541504,0,-,-,-,-,"SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+StartTime(MAX),PipelineExecutionLogs(ingestion),Order,0.428434610367,0,-,-,-,-,"SELECT {[Measures].[StartTime(MAX)]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+EndTime(MAX),PipelineExecutionLogs(ingestion),Order,0.282290458679,0,-,-,-,-,"SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+CurrentDuration,PipelineExecutionLogs(ingestion),Order,0.286575555801,0,-,-,-,-,"SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+ColorCode_DatasetRefreshHistory,PipelineExecutionLogs(ingestion),Order,0.299514532089,0,-,-,-,-,"SELECT {[Measures].[ColorCode_DatasetRefreshHistory]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+CurrentStatus,PipelineExecutionLogs(ingestion),Order,0.426175594330,0,-,-,-,-,"SELECT {[Measures].[CurrentStatus]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+MetaCombineDate,PipelineExecutionLogs(ingestion),Order,0.381942987442,0,-,-,-,-,"SELECT {[Measures].[MetaCombineDate]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+MetaCombineStatus,PipelineExecutionLogs(ingestion),Order,0.536003589630,0,-,-,-,-,"SELECT {[Measures].[MetaCombineStatus]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+CurrentStatus Ingestion,PipelineExecutionLogs(ingestion),Order,0.713752031326,0,-,-,-,-,"SELECT {[Measures].[CurrentStatus Ingestion]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]",1
+MetaCombineDate,Stream Name Dimension Ingestion,,0.392105340958,0,-,-,-,-,,1
