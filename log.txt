@@ -1,0 +1,760 @@
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+DEBUG:root:Process with Port 3002 (PID: 0) killed.
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:3002
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:51] "[36mGET /static/css/main.073f18e4.chunk.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:51] "[36mGET /static/js/2.e1871f0f.chunk.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:51] "[36mGET /static/css/2.ff6467d8.chunk.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:51] "[36mGET /static/js/main.cbf05172.chunk.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:51] "[33mGET /manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:52] "GET /getreport HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:55] "GET /getreport HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:58] "OPTIONS /progress HTTP/1.1" 200 -
+DEBUG:root:{'multipleFiles': False, 'singleFile': True, 'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '3', 'isFirstTime': True}
+DEBUG:root:<class 'str'>
+DEBUG:root:{'multipleFiles': False, 'singleFile': True, 'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '3', 'isFirstTime': True}
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:58] "OPTIONS /data HTTP/1.1" 200 -
+DEBUG:root:{'multipleFiles': False, 'singleFile': True, 'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '3', 'isFirstTime': True}
+DEBUG:root:{'multipleFiles': False, 'singleFile': True, 'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '3', 'isFirstTime': True}
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'vcObjects'
+DEBUG:root:'vcObjects'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'singleVisual'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:                          TableName  TableID  ...                                        ValuesQuery  ID
+0   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   1
+1   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   2
+2   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   3
+3   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   4
+4   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   5
+..                              ...      ...  ...                                                ...  ..
+58    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  59
+59    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  60
+60    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  61
+61    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  62
+62    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  63
+
+[63 rows x 6 columns]
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:59] "POST /progress HTTP/1.1" 200 -
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:11
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:8
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:220
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:224
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:224
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:26
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:16
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:284
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:26
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:5
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:17
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:7
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:17
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:7
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:1
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:5
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:6
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:17
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:17
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:17
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:6
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:nan
+DEBUG:root:6
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:13
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:7
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:nan
+DEBUG:root:22
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:108
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:1
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:107
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:6
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:1
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:6
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:6
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:107
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:7
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:35
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:528
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:5
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:5
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:528
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:Currently running : SELECT {[Measures].[LastTimeRefresh(MAX) Ingestion(PST)]} ON 0 ,NON EMPTY{[meta PipelineExecutionLogs].[PipelineName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[LastTimeRefresh(MAX) Ingestion(PST)]} ON 0 ,NON EMPTY{[meta PipelineExecutionLogs].[Stage Name].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[LastTimeRefresh(MAX) Ingestion(PST)]} ON 0 ,NON EMPTY{[meta PipelineExecutionLogs].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:Query (1, 75) The dimension '[meta PipelineExecutionLogs]' was not found in the cube when the string, [meta PipelineExecutionLogs].[Stage Name], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 75) The dimension '[meta PipelineExecutionLogs]' was not found in the cube when the string, [meta PipelineExecutionLogs].[PipelineName], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 75) The dimension '[meta PipelineExecutionLogs]' was not found in the cube when the string, [meta PipelineExecutionLogs].[StreamName], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus(MAX)]} ON 0 ,NON EMPTY{[pipelineexecutionlogs].[Mappedcolumns].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[pipelineexecutionlogs].[Mappedcolumns].children} ON 1 FROM [Model]
+
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_BackupPipelineExecutionlogs]} ON 0 ,NON EMPTY{[backuppipelineexecutionlogs].[StageName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_BackupPipelineExecutionlogs]} ON 0 ,NON EMPTY{[backuppipelineexecutionlogs].[PipelineName].children} ON 1 FROM [Model]
+
+DEBUG:root:Query (1, 51) The dimension '[pipelineexecutionlogs]' was not found in the cube when the string, [pipelineexecutionlogs].[Mappedcolumns], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 58) The dimension '[pipelineexecutionlogs]' was not found in the cube when the string, [pipelineexecutionlogs].[Mappedcolumns], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 77) The dimension '[backuppipelineexecutionlogs]' was not found in the cube when the string, [backuppipelineexecutionlogs].[PipelineName], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 77) The dimension '[backuppipelineexecutionlogs]' was not found in the cube when the string, [backuppipelineexecutionlogs].[StageName], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_BackupPipelineExecutionlogs]} ON 0 ,NON EMPTY{[backuppipelineexecutionlogs].[MappedColumn].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_BackupPipelineExecutionlogs]} ON 0 ,NON EMPTY{[backuppipelineexecutionlogs].[RefreshTime(PST)].children} ON 1 FROM [Model]
+
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[datasetrefreshhistory].[EndTime(PST)].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[datasetrefreshhistory].[StartTime(PST)].children} ON 1 FROM [Model]
+
+DEBUG:root:Query (1, 77) The dimension '[backuppipelineexecutionlogs]' was not found in the cube when the string, [backuppipelineexecutionlogs].[RefreshTime(PST)], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 77) The dimension '[backuppipelineexecutionlogs]' was not found in the cube when the string, [backuppipelineexecutionlogs].[MappedColumn], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[CountNonNull(datasetrefreshhistory].[ID].children} ON 1 FROM [Model]
+
+DEBUG:root:Query (1, 55) The dimension '[datasetrefreshhistory]' was not found in the cube when the string, [datasetrefreshhistory].[EndTime(PST)], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 55) The dimension '[datasetrefreshhistory]' was not found in the cube when the string, [datasetrefreshhistory].[StartTime(PST)], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[datasetrefreshhistory].[RefreshType].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[Last Refresh Time Ingestion]} ON 0 ,NON EMPTY{[Stream Name Dimension Ingestion].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Query (1, 55) The dimension '[CountNonNull(datasetrefreshhistory]' was not found in the cube when the string, [CountNonNull(datasetrefreshhistory].[ID], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Currently running : SELECT {[Measures].[Last Refresh Time Ingestion]} ON 0 ,NON EMPTY{[meta PipelineExecutionLogs].[Stage Name].children} ON 1 FROM [Model]
+
+DEBUG:root:Query (1, 55) The dimension '[datasetrefreshhistory]' was not found in the cube when the string, [datasetrefreshhistory].[RefreshType], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 67) The dimension '[meta PipelineExecutionLogs]' was not found in the cube when the string, [meta PipelineExecutionLogs].[Stage Name], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Currently running : SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[StartTime(MAX)]} ON 0 ,NON EMPTY{[Dataset Refresh History].[MappedDatasetName].children} ON 1 FROM [Model]
+
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:Currently running : SELECT {[Measures].[DateShow]} ON 0 ,NON EMPTY{[pipelineexecutionlogs].[StageName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[DateShow]} ON 0 ,NON EMPTY{[Dim2].[Mappedcolumns].children} ON 1 FROM [Model]
+
+DEBUG:root:Query (1, 48) The dimension '[Dim2]' was not found in the cube when the string, [Dim2].[Mappedcolumns], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:Query (1, 48) The dimension '[pipelineexecutionlogs]' was not found in the cube when the string, [pipelineexecutionlogs].[StageName], was parsed.
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:Currently running : SELECT [Measures].[CurrentStatusLatest Ingestion] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[CurrentStatus Ingestion] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[TodaysStatus] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[ColorCode_DatasetRefreshHistory] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[CurrentStatus] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[CombineStatus] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[NextScheduleRefresh] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[LastTimeRefresh(MAX) Ingestion] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[LastTimeRefresh(MAX)] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[ColorCode_SummaryPage] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[NextScheduleRefreshIngestion] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[ColorCode_BackupPipelinelogs] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[MetaCurrentStatus(MAX)] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[MetaCombineStatus] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[MetaCombineDate] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[LastTimeRefresh(MAX) IN] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[DateShow Ingestion] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT [Measures].[ColorCode_SummaryPage Ingestion Framework] ON 0 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[DateShow]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus(MAX)]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[NextScheduleRefresh]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_SummaryPage]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[LastTimeRefresh(MAX)]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[DateShow Ingestion]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[Last Refresh Time Ingestion]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[LastTimeRefresh(MAX) Ingestion(PST)]} ON 0 ,NON EMPTY{[Stream Name Dimension].[StreamNameOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[StartTime(MAX)]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_DatasetRefreshHistory]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[MetaCombineDate]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[MetaCombineStatus]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus Ingestion]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatusLatest Ingestion]} ON 0 ,NON EMPTY{[Pipeline Execution Logs].[StreamOrder].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[StartTime(MAX)]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_DatasetRefreshHistory]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[MetaCombineDate]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[MetaCombineStatus]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus Ingestion]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatusLatest Ingestion]} ON 0 ,NON EMPTY{[PipelineBackupLogs(Ingestion)].[StreamName].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineStatus]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CombineDate]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[StartTime(MAX)]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[EndTime(MAX)]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentDuration]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[ColorCode_DatasetRefreshHistory]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[MetaCombineDate]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[MetaCombineStatus]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatus Ingestion]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:Currently running : SELECT {[Measures].[CurrentStatusLatest Ingestion]} ON 0 ,NON EMPTY{[PipelineExecutionLogs(ingestion)].[Order].children} ON 1 FROM [Model]
+
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:can only concatenate str (not "float") to str
+DEBUG:root:Queries execution completed
+
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 12:45:59] "POST /data HTTP/1.1" 200 -
