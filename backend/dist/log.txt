@@ -1,0 +1,423 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:3002
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:33] "GET /static/css/2.ff6467d8.chunk.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:33] "GET /static/js/2.f926ea75.chunk.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:33] "GET /static/css/main.7732731e.chunk.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:33] "GET /static/js/main.976e431c.chunk.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:34] "[33mGET /manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:21:34] "GET /getreport HTTP/1.1" 200 -
+DEBUG:root:{'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '5', 'isFirstTime': True}
+DEBUG:root:<class 'str'>
+DEBUG:root:{'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '5', 'isFirstTime': True}
+DEBUG:root:['C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix']
+DEBUG:root:Refresh Tracker (3)C:\Users\MAQ\Documents\Refresh Tracker (3)
+DEBUG:root:New file path:C:\Users\MAQ\Documents\Refresh Tracker (3)\Refresh Tracker (3).pbix
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'vcObjects'
+DEBUG:root:'vcObjects'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'singleVisual'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'text'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'title'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:'vcObjects'
+DEBUG:root:'prototypeQuery'
+DEBUG:root:                          PageName  VisualName  ...                            VisualTitle           ReportName
+0                          Read Me        card  ...                                         Refresh Tracker (3)
+1          Ingestion Pipeline Logs        card  ...                                         Refresh Tracker (3)
+2          Ingestion Pipeline Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+3          Ingestion Pipeline Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+4          Ingestion Pipeline Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+5   Ingestion Pipeline Backup Logs        card  ...                                         Refresh Tracker (3)
+6                     Summary Logs        card  ...                                         Refresh Tracker (3)
+7                     Summary Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+8                     Summary Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+9             Pipeline Backup Logs        card  ...                                         Refresh Tracker (3)
+10            Pipeline Backup Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+11            Pipeline Backup Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+12            Pipeline Backup Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+13            Pipeline Backup Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+14                    Dataset Logs        card  ...                                         Refresh Tracker (3)
+15                    Dataset Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+16                    Dataset Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+17                    Dataset Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+18                    Dataset Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+19                    Dataset Logs     tableEx  ...  Controllable On-Time Performance for:  Refresh Tracker (3)
+20           Summary Detailed Logs  pivotTable  ...                                         Refresh Tracker (3)
+21           Summary Detailed Logs  pivotTable  ...                                         Refresh Tracker (3)
+22           Summary Detailed Logs     tableEx  ...                              DC Result  Refresh Tracker (3)
+23           Summary Detailed Logs     tableEx  ...                              DC Result  Refresh Tracker (3)
+24           Summary Detailed Logs     tableEx  ...                              DC Result  Refresh Tracker (3)
+25           Summary Detailed Logs        card  ...                                         Refresh Tracker (3)
+26           Summary Detailed Logs  pivotTable  ...                                         Refresh Tracker (3)
+27           Summary Detailed Logs  pivotTable  ...                                         Refresh Tracker (3)
+28                   Pipeline Logs        card  ...                                         Refresh Tracker (3)
+
+[29 rows x 7 columns]
+DEBUG:root:
+
+DEBUG:root:                          TableName  TableID  ...                                        ValuesQuery  ID
+0   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   1
+1   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   2
+2   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   3
+3   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   4
+4   Pipeline Execution Logs(BackUp)    75767  ...  WITH MEMBER [Measures].[Count] AS [Pipeline Ex...   5
+..                              ...      ...  ...                                                ...  ..
+58    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  59
+59    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  60
+60    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  61
+61    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  62
+62    PipelineBackupLogs(Ingestion)  1268039  ...  WITH MEMBER [Measures].[Count] AS [PipelineBac...  63
+
+[63 rows x 6 columns]
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2023 13:22:03] "POST /progress HTTP/1.1" 200 -
+DEBUG:root:{'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '5', 'isFirstTime': True}
+DEBUG:root:{'filePath': 'C:\\Users\\MAQ\\Documents\\Refresh Tracker (3).pbix', 'modelName': 'Refresh Tracker', 'xmlaEndpoint': 'powerbi://api.powerbi.com/v1.0/myorg/Sprouts%20EDW%20-%20Test;Initial Catalog=Refresh Tracker;', 'thresholdValue': '5', 'isFirstTime': True}
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:11
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:8
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:221
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:224
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:224
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:26
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:15
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:2
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:16
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:332
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:26
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:5
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:17
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....
+DEBUG:root:3
+DEBUG:root:Column Values Count queries are running....

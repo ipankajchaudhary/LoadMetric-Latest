@@ -488,18 +488,16 @@ def index():
  
 
 @app.route('/data', methods=['POST'])
-def get_data():
+def getData():
     data = request.json
     logging.debug(data)
     response = {'message': 'Data received', 'data': data}
 
-    singleFile = data["singleFile"]
-    filePath = data["filePath"]
     modelName = data["modelName"]
     endpoint = data["xmlaEndpoint"]
     thresholdValue = data["thresholdValue"]
     isFirstTime = data["isFirstTime"]
-    checkforlocal = 'y'
+    checkforlocal = 'n'
     connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=5dd1196f-83a2-45c1-a53b-f90aca647bc4;Data Source=localhost:61115;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
     logging.debug(data)
     parsedDF = pd.read_csv("ParsedDF.csv")
@@ -536,59 +534,53 @@ def getReport():
 
 
 @app.route('/progress', methods=['POST'])
-def get_progress():
+def getProgress():
     data = request.json
     logging.debug(data)
     response = {'message': 'Data received', 'data': data}
 
-    singleFile = data["singleFile"]
+    # singleFile = data["singleFile"]
     filePath = data["filePath"]
     logging.debug(type(filePath))
     modelName = data["modelName"]
     endpoint = data["xmlaEndpoint"]
     thresholdValue = data["thresholdValue"]
     isFirstTime = data["isFirstTime"]
-    checkforlocal = 'y'
+    checkforlocal = 'n'
     connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=5dd1196f-83a2-45c1-a53b-f90aca647bc4;Data Source=localhost:61115;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
     logging.debug(data)
 
-    if(singleFile == True):
-        parser = Parser(data["filePath"])
-        parsedDF = parser.parse()
-        filen, extension = os.path.splitext(os.path.basename(data['filePath']))
-        parsedDF['ReportName'] = filen
-    else:
-        filePath = filePath.split(',')
-        logging.debug(filePath)
-        newFolderPaths = []
-        for fileName in filePath:
+    filePath = filePath.split(',')
+    logging.debug(filePath)
+    newFolderPaths = []
+    for fileName in filePath:
 
-                folderName = os.path.splitext(os.path.basename(fileName))[0]
-                newFolderPath = os.path.join(os.path.dirname(fileName), folderName)
-                os.makedirs(newFolderPath, exist_ok=True)
+            folderName = os.path.splitext(os.path.basename(fileName))[0]
+            newFolderPath = os.path.join(os.path.dirname(fileName), folderName)
+            os.makedirs(newFolderPath, exist_ok=True)
 
-                logging.debug(folderName,newFolderPath)
+            logging.debug(str(folderName) + str(newFolderPath))
 
-                shutil.copy2(fileName, newFolderPath)
+            shutil.copy2(fileName, newFolderPath)
 
-                newfilePath = os.path.join(newFolderPath, os.path.basename(fileName))
-                logging.debug("New file path:", newfilePath)
-                csvPath = newFolderPath + "\Res.csv"
-                newFolderPaths.append(newFolderPath)
-                parser = Parser(fileName)
-                parsedDF = parser.parse()
-                filen, extension = os.path.splitext(os.path.basename(fileName))
-                parsedDF['ReportName'] = filen
-                parsedDF.to_csv(csvPath,index = False)
-                logging.debug(parsedDF)
-                logging.debug("\n")
+            newfilePath = os.path.join(newFolderPath, os.path.basename(fileName))
+            logging.debug("New file path:" + str(newfilePath))
+            csvPath = newFolderPath + "\Res.csv"
+            newFolderPaths.append(newFolderPath)
+            parser = Parser(fileName)
+            parsedDF = parser.parse()
+            filen, extension = os.path.splitext(os.path.basename(fileName))
+            parsedDF['ReportName'] = filen
+            parsedDF.to_csv(csvPath,index = False)
+            logging.debug(parsedDF)
+            logging.debug("\n")
 
-        dfList = []
-        for folderPath in newFolderPaths:
-                csvPath = os.path.join(folderPath, "Res.csv")  
-                df = pd.read_csv(csvPath) 
-                dfList.append(df)
-        parsedDF = pd.concat(dfList)
+    dfList = []
+    for folderPath in newFolderPaths:
+            csvPath = os.path.join(folderPath, "Res.csv")  
+            df = pd.read_csv(csvPath) 
+            dfList.append(df)
+    parsedDF = pd.concat(dfList)
 
     parsedDF.to_csv("ParsedDF.csv")
 
@@ -614,6 +606,10 @@ if __name__ == "__main__":
             processID = line.split()[-1]
             subprocess.call(['taskkill', '/PID', processID, '/F'])
             logging.debug(f"Process with Port {3002} (PID: {processID}) killed.")
+            logging.debug(f"Process with Port {3002} (PID: {processID}) killed.")
+    # app.debug = True
+    
+            logging.debug(f"Process with Port {3002} (PID: {processID}) killed.")    
     # app.debug = True
     
 

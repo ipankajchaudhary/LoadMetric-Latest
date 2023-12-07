@@ -6,8 +6,6 @@ const InputScreen = ({ handleFormSubmit }) => {
   const [selectedFiles, setSelectedFiles] = useState('') 
 
   const [formData, setFormData] = useState({
-    multipleFiles: false,
-    singleFile: false,
     filePath: '',
     modelName: '',
     xmlaEndpoint: '',
@@ -23,7 +21,6 @@ const InputScreen = ({ handleFormSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    // console.log(formData)
     handleFormSubmit(formData)
    
   }
@@ -50,7 +47,7 @@ const InputScreen = ({ handleFormSubmit }) => {
     }
 
     fetchReports()
-  }, []) // Empty dependency array ensures that this effect runs once when the component mounts
+  }, []) 
 
   useEffect(() => {
     const options = Filepath.filepath.map(pathArray => {
@@ -67,7 +64,7 @@ const InputScreen = ({ handleFormSubmit }) => {
     })
 
     setOptions(options)
-  }, [Filepath]) // Run this effect whenever Filepath changes
+  }, [Filepath]) 
 
 
   return (
@@ -80,37 +77,10 @@ const InputScreen = ({ handleFormSubmit }) => {
         id="contact_form"
       >
         <fieldset>
-          <div class="form-group d-flex">
-            <label class="col-md-4 control-label">
-              Check for Multiple Files:
-            </label>
-            <div class="col-md-8">
-              <input
-                type="checkbox"
-                id="multiple_files"
-                name="multipleFiles"
-                value={formData.multipleFiles}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
 
-          <div class="form-group d-flex">
-            <label class="col-md-4 control-label">Check for Single File:</label>
-            <div class="col-md-8">
-              <input
-                type="checkbox"
-                id="single_file"
-                name="singleFile"
-                value={formData.singleFile}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
           <div class="form-group d-flex">
             <label class="col-md-4 control-label">File Paths</label>
             <div class="col-md-8">
-              {/* <input name="filePath" placeholder="Enter the file path" class="form-control" value={formData.filePath} type="text" onChange={handleChange} /> */}
               <Select isMulti options={options} onChange={handleChangeFile} />
             </div>
           </div>
