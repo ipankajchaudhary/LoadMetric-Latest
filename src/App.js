@@ -49,7 +49,7 @@ const App = () => {
           console.error("Error:", error);
           alert(error);
         });
-    }, 100000);
+    }, 10);
   };
 
   return (

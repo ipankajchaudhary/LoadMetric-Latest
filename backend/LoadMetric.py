@@ -13,17 +13,19 @@ import time
 import concurrent.futures
 import psutil
 from flask_cors import CORS
+import logging
 
 
-msi_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static\ADOMD\\x64_16.0.5384.0_SQL_AS_ADOMD.msi")
-command = ['msiexec', '/i', msi_file_path]
-CopyPath = "C:/Program Files/Microsoft.NET/ADOMD.NET/160/Microsoft.AnalysisServices.AdomdClient.dll"
-if not os.path.exists(os.path.dirname(CopyPath)):
+logging.basicConfig(filename='log.txt', filemode='w',  level=logging.DEBUG)
+msiFilePath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static\ADOMD\\x64_16.0.5384.0_SQL_AS_ADOMD.msi")
+command = ['msiexec', '/i', msiFilePath]
+copyPath = "C:/Program Files/Microsoft.NET/ADOMD.NET/160/Microsoft.AnalysisServices.AdomdClient.dll"
+if not os.path.exists(os.path.dirname(copyPath)):
     try:
         subprocess.run(command, check=True)
-        print("MSI installation completed successfully.")
+        logging.debug("MSI installation completed successfully.")
     except subprocess.CalledProcessError as e:
-        print(f"MSI installation failed with error: {e}")
+        logging.debug(f"MSI installation failed with error: {e}")
 
 path.append('\\Program Files\\Microsoft.NET\\ADOMD.NET\\160')
 
@@ -46,21 +48,19 @@ class Parser:
         self.fileName = self.fileName[:-5] + "(1).pbix"
         base = os.path.splitext(self.fileName)[0]
 
-        # zipping the file
         os.rename(self.fileName, base + ".zip")
 
-        # unzipping the file
         with ZipFile(self.fileName[:-5] + ".zip", 'r') as zip:
+            filesToDelete = zip.namelist()
             zip.extractall()
-
         base = os.path.splitext("Report\Layout")[0]
-        oldFilePath = "Report\\Layout"
-        newFilePath = base + ".txt"
+        oldfilePath = "Report\\Layout"
+        newfilePath = base + ".txt"
 
-        if os.path.exists(newFilePath):
-            os.remove(newFilePath)
+        if os.path.exists(newfilePath):
+            os.remove(newfilePath)
 
-        os.rename(oldFilePath, newFilePath)
+        os.rename(oldfilePath, newfilePath)
 
         with open("Report\Layout.txt", "rb") as user_file:
             fileContents = json.loads(user_file.read())
@@ -85,7 +85,7 @@ class Parser:
                         CapturedVisualTitle = CapturedVisualTitle.replace(",","")
 
                     except Exception as e:
-                        print(e)
+                        logging.debug(e)
                     data = data["prototypeQuery"]["Select"]
                     t = len(data)
                     ColumnList = []
@@ -129,63 +129,24 @@ class Parser:
                                 
 
                 except KeyError as e:
-                    print(e)
+                    logging.debug(e)
         df = pd.DataFrame(parserArray)
         df.drop_duplicates(inplace=True)
-        # try:
-        #     os.remove("DataModel")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("Connections")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("DiagramLayout")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("[Content_Types].xml")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("DiagramState")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove(self.fileName[:-5] + ".zip")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("Metadata")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("SecurityBindings")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("Settings")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("ResultTable")
-        # except Exception:
-        #     print("\n")
-        # try:
-        #     os.remove("OUTPUT.txt")
-        # except Exception:
-        #     print("\n")
+        os.remove(self.fileName[:-5] + ".zip")
+        for file in filesToDelete:
+            if('Report' not in file):
+                os.remove(file)
         return df
 
 
 
 class QueryExecutor:
     def __init__(self, thresholdTime, connectionString, df):
-        self.num_threads = 5
+        self.numThreads = 5
         self.thresholdTime = thresholdTime
         self.connectionString = connectionString
         self.res = []
+        self.count = 0
         self.df = df
 
     def processQuery(self, query, i):
@@ -193,14 +154,14 @@ class QueryExecutor:
             con = Pyadomd(self.connectionString)
             con.open()
             startTime = time.time()
-            print("Currently running : " + query + "\n")
+            logging.debug("Currently running : " + query + "\n")
             result = con.cursor().execute(query)
             dftemp = pd.DataFrame(result.fetchone())
             self.count = self.count + 1
             endTime = time.time()
             elapsedTime = endTime - startTime
             if elapsedTime >= float(self.thresholdTime):
-                print(
+                logging.debug(
                     f"Query {query} took too long to execute ({elapsedTime}). Aborting query...")
                 con.close()
                 return self.thresholdTime
@@ -208,11 +169,11 @@ class QueryExecutor:
                 con.close()
                 return f"{elapsedTime:0.12f}"
         except Exception as e:
-            print(e)
+            logging.debug(e)
             return None
 
     def executeQuery(self, df):
-        with concurrent.futures.ThreadPoolExecutor(max_workers=self.num_threads) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.numThreads) as executor:
             futures = [executor.submit(self.processQuery, query, i)
                        for i, query in enumerate(df["Query"])]
             for i, future in enumerate(concurrent.futures.as_completed(futures)):
@@ -224,7 +185,7 @@ class QueryExecutor:
 
 
 class LoadTimeChecker:
-    def __init__(self, modelName, endpoint, connectionstring, checkforlocal, runningforfirsttime, parsedDataFrame, thresholdValue):
+    def __init__(self, modelName, endpoint, connectionstring, checkforlocal, runningFirstTime, parsedDataFrame, thresholdValue):
         self.modelName = modelName
         self.endpoint = endpoint
         self.checkforlocal = checkforlocal
@@ -239,7 +200,7 @@ class LoadTimeChecker:
             self.PowerBIPassword = ""
             self.connectionString = "Provider=MSOLAP.8;Data Source=" + self.PowerBIEndpoint + \
                 ";UID=" + self.PowerBILogin + ";PWD=" + self.PowerBIPassword
-        self.runningforfirsttime = runningforfirsttime
+        self.runningFirstTime = runningFirstTime
         self.con = Pyadomd(self.connectionString)
 
     def MeasureListSQLQuery(self):
@@ -296,7 +257,7 @@ class LoadTimeChecker:
             '].Count SELECT {[Measures].[Count]} ON COLUMNS  FROM [Model]'
         df.reset_index(drop=True, inplace=True)
         df['ID'] = df.index + 1
-        print(df)
+        logging.debug(df)
         df.to_csv("columnvaluescountquery.csv")
         return len(df.index)
     
@@ -309,11 +270,11 @@ class LoadTimeChecker:
                 result = self.con.cursor().execute(query)
                 tempDF = pd.DataFrame(result.fetchone(), columns=["Count"])
                 df.at[i, 'Count'] = tempDF['Count'][0]
-                print(tempDF['Count'][0])
-                print("Column Values Count queries are running....")
+                logging.debug(tempDF['Count'][0])
+                logging.debug("Column Values Count queries are running....")
                 self.con.close()
             except:
-                print(query)
+                logging.debug(query)
                 self.con.close()
         return df
 
@@ -428,7 +389,7 @@ class LoadTimeChecker:
 
         return MeasureTimeWithDimensions
 
-    def get_loadTime(self):
+    def getLoadTime(self):
 
         MeasuresWithDimensions = self.MeasureTimeWithDimensionsQuery()
         MeasuresWithoutDimensions = self.MeasureTimeWithoutDimensionsQuery()
@@ -494,16 +455,16 @@ class LoadTimeChecker:
         queryExecutorObject = QueryExecutor(
             self.thresholdValue, self.connectionString, possibleCombinations)
         queryExecutorObject.executeQuery(possibleCombinations)
-        print("Queries execution completed\n")
+        logging.debug("Queries execution completed\n")
 
         
 
-        if (self.runningforfirsttime == True):
+        if (self.runningFirstTime == True):
             possibleCombinations.to_csv("RES.csv", index=False)
         else:
             previousLoadTimeDataFrame = pd.read_csv("RES.csv")
             possibleCombinations['PreviousLoadTime'] = "0"
-            print(previousLoadTimeDataFrame)
+            logging.debug(previousLoadTimeDataFrame)
             for j in previousLoadTimeDataFrame.index:
                 for i in possibleCombinations.index:
                     if (possibleCombinations['Query'][i] == previousLoadTimeDataFrame['Query'][j]):
@@ -529,70 +490,23 @@ def index():
 @app.route('/data', methods=['POST'])
 def get_data():
     data = request.json
-    print(data)
+    logging.debug(data)
     response = {'message': 'Data received', 'data': data}
 
     singleFile = data["singleFile"]
-    filepath = data["filePath"]
+    filePath = data["filePath"]
     modelName = data["modelName"]
     endpoint = data["xmlaEndpoint"]
     thresholdValue = data["thresholdValue"]
     isFirstTime = data["isFirstTime"]
-    checkforlocal = 'n'
-    connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=a105a363-e6db-4947-acf2-5b3078bdab89;Data Source=localhost:53624;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
-    print(data)
-
-    if(singleFile == True):
-        parser = Parser(data["filePath"])
-        parsed_df = parser.parse()
-        filen, extension = os.path.splitext(os.path.basename(data['filePath']))
-        parsed_df['ReportName'] = filen
-    else:
-        filepath = filepath.split(',')
-        print(filepath)
-        newfolderpaths = []
-        for file_name in filepath:
-
-            folder_name = os.path.splitext(os.path.basename(file_name))[0]
-            new_folder_path = os.path.join(os.path.dirname(file_name), folder_name)
-            os.makedirs(new_folder_path, exist_ok=True)
-
-            print(folder_name,new_folder_path)
-
-            shutil.copy2(file_name, new_folder_path)
-
-            newFilePath = os.path.join(new_folder_path, os.path.basename(file_name))
-            print("New file path:", newFilePath)
-            csv_path = new_folder_path + "\Res.csv"
-            newfolderpaths.append(new_folder_path)
-            parser = Parser(file_name)
-            parsed_df = parser.parse()
-            filen, extension = os.path.splitext(os.path.basename(file_name))
-            parsed_df['ReportName'] = filen
-            # df.drop(columns = ['Query'])
-            # df = df.reset_index().rename(columns={'index': 'id'})
-            parsed_df.to_csv(csv_path,index = False)
-            print(parsed_df)
-            print("\n")
-
-        df_list = []
-        for folder_path in newfolderpaths:
-            csv_path = os.path.join(folder_path, "Res.csv")
-            
-            df = pd.read_csv(csv_path)
-            
-            df_list.append(df)
-
-        parsed_df = pd.concat(df_list)
-
-
+    checkforlocal = 'y'
+    connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=5dd1196f-83a2-45c1-a53b-f90aca647bc4;Data Source=localhost:61115;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
+    logging.debug(data)
+    parsedDF = pd.read_csv("ParsedDF.csv")
     loadtimechecker = LoadTimeChecker(
-        modelName, endpoint, connectionString, checkforlocal, isFirstTime, parsed_df, thresholdValue)
-    li = loadtimechecker.get_loadTime()
-
+        modelName, endpoint, connectionString, checkforlocal, isFirstTime, parsedDF, thresholdValue)
+    li = loadtimechecker.getLoadTime()
     df = li[0]
-    filen, extension = os.path.splitext(os.path.basename(data['filePath']))
-
     connectionString = li[1]
 
     result = "{" '\"result\": ' + df.to_json(
@@ -602,7 +516,7 @@ def get_data():
 
 
 
-def list_power_bi_files():
+def getReportList():
     parserArray = {
         'filepath' : []
     }
@@ -615,8 +529,8 @@ def list_power_bi_files():
     return parserArray
 
 @app.route('/getreport', methods=['GET'])
-def get_report():
-    result = list_power_bi_files()
+def getReport():
+    result = getReportList()
     return jsonify(result)
 
 
@@ -624,59 +538,62 @@ def get_report():
 @app.route('/progress', methods=['POST'])
 def get_progress():
     data = request.json
-    print(data)
+    logging.debug(data)
     response = {'message': 'Data received', 'data': data}
 
     singleFile = data["singleFile"]
-    filepath = data["filePath"]
+    filePath = data["filePath"]
+    logging.debug(type(filePath))
     modelName = data["modelName"]
     endpoint = data["xmlaEndpoint"]
     thresholdValue = data["thresholdValue"]
     isFirstTime = data["isFirstTime"]
-    checkforlocal = 'n'
-    connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=a105a363-e6db-4947-acf2-5b3078bdab89;Data Source=localhost:53624;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
-    print(data)
+    checkforlocal = 'y'
+    connectionString = "Provider=MSOLAP.8;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=5dd1196f-83a2-45c1-a53b-f90aca647bc4;Data Source=localhost:61115;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2"
+    logging.debug(data)
 
     if(singleFile == True):
         parser = Parser(data["filePath"])
-        parsed_df = parser.parse()
+        parsedDF = parser.parse()
         filen, extension = os.path.splitext(os.path.basename(data['filePath']))
-        parsed_df['ReportName'] = filen
+        parsedDF['ReportName'] = filen
     else:
-        filepath = filepath.split(',')
-        print(filepath)
-        newfolderpaths = []
-        for file_name in filepath:
+        filePath = filePath.split(',')
+        logging.debug(filePath)
+        newFolderPaths = []
+        for fileName in filePath:
 
-            folder_name = os.path.splitext(os.path.basename(file_name))[0]
-            new_folder_path = os.path.join(os.path.dirname(file_name), folder_name)
-            os.makedirs(new_folder_path, exist_ok=True)
+                folderName = os.path.splitext(os.path.basename(fileName))[0]
+                newFolderPath = os.path.join(os.path.dirname(fileName), folderName)
+                os.makedirs(newFolderPath, exist_ok=True)
 
-            print(folder_name,new_folder_path)
+                logging.debug(folderName,newFolderPath)
 
-            shutil.copy2(file_name, new_folder_path)
+                shutil.copy2(fileName, newFolderPath)
 
-            newFilePath = os.path.join(new_folder_path, os.path.basename(file_name))
-            print("New file path:", newFilePath)
-            csv_path = new_folder_path + "\Res.csv"
-            newfolderpaths.append(new_folder_path)
-            parser = Parser(file_name)
-            parsed_df = parser.parse()
-            filen, extension = os.path.splitext(os.path.basename(file_name))
-            parsed_df['ReportName'] = filen
-            parsed_df.to_csv(csv_path,index = False)
-            print(parsed_df)
-            print("\n")
+                newfilePath = os.path.join(newFolderPath, os.path.basename(fileName))
+                logging.debug("New file path:", newfilePath)
+                csvPath = newFolderPath + "\Res.csv"
+                newFolderPaths.append(newFolderPath)
+                parser = Parser(fileName)
+                parsedDF = parser.parse()
+                filen, extension = os.path.splitext(os.path.basename(fileName))
+                parsedDF['ReportName'] = filen
+                parsedDF.to_csv(csvPath,index = False)
+                logging.debug(parsedDF)
+                logging.debug("\n")
 
-        df_list = []
-        for folder_path in newfolderpaths:
-            csv_path = os.path.join(folder_path, "Res.csv")  
-            df = pd.read_csv(csv_path) 
-            df_list.append(df)
-        parsed_df = pd.concat(df_list)
+        dfList = []
+        for folderPath in newFolderPaths:
+                csvPath = os.path.join(folderPath, "Res.csv")  
+                df = pd.read_csv(csvPath) 
+                dfList.append(df)
+        parsedDF = pd.concat(dfList)
+
+    parsedDF.to_csv("ParsedDF.csv")
 
     loadtimechecker = LoadTimeChecker(
-        modelName, endpoint, connectionString, checkforlocal, isFirstTime, parsed_df, thresholdValue)
+        modelName, endpoint, connectionString, checkforlocal, isFirstTime, parsedDF, thresholdValue)
     li = loadtimechecker.ColumnValuesCountQueryforprogress()
 
     result = "{" '\"result\": ' + '"' + str(li) + '"' + "}"
@@ -691,20 +608,20 @@ def quit():
   return
 
 if __name__ == "__main__":
-    netstat_output = subprocess.check_output(['netstat', '-ano']).decode('utf-8')
-    for line in netstat_output.splitlines():
+    netstateOutput = subprocess.check_output(['netstat', '-ano']).decode('utf-8')
+    for line in netstateOutput.splitlines():
         if f':{3002}' in line:
-            process_id = line.split()[-1]
-            subprocess.call(['taskkill', '/PID', process_id, '/F'])
-            print(f"Process with Port {3002} (PID: {process_id}) killed.")
+            processID = line.split()[-1]
+            subprocess.call(['taskkill', '/PID', processID, '/F'])
+            logging.debug(f"Process with Port {3002} (PID: {processID}) killed.")
     # app.debug = True
     
 
-    netstat_output = subprocess.check_output(['netstat', '-ano']).decode('utf-8')
-    for line in netstat_output.splitlines():
+    netstateOutput = subprocess.check_output(['netstat', '-ano']).decode('utf-8')
+    for line in netstateOutput.splitlines():
         if f':{3002}' in line:
-            process_id = line.split()[-1]
-            subprocess.call(['taskkill', '/PID', process_id, '/F'])
-            print(f"Process with Port {3002} (PID: {process_id}) killed.")
+            processID = line.split()[-1]
+            subprocess.call(['taskkill', '/PID', processID, '/F'])
+            logging.debug(f"Process with Port {3002} (PID: {processID}) killed.")
 
     FlaskUI(app=app, server="flask",width=1920, height=1080, port=3002).run()

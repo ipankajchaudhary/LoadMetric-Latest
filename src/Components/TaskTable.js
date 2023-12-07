@@ -62,20 +62,20 @@ class TaskTable extends React.Component {
   }
 
 
-  setData = () => {
-    this.setState(this.props.data)
-  }
+  // setData = () => {
+  //   this.setState(this.props.data)
+  // }
 
-  clearData = () => {
-    this.setState({ data: [] })
-  }
+  // clearData = () => {
+  //   this.setState({ data: [] })
+  // }
 
   render() {
     const rowFormatter = row => {
       const data = row.getData()
 
       if (data.LoadTime === this.state.threshold) {
-        row.getElement().style.backgroundColor = 'red'
+        row.getElement().style.backgroundColor = '#cf787e'
       }
     }
 

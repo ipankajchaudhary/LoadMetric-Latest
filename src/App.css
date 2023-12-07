@@ -303,3 +303,8 @@ option {
   white-space: inherit !important;
   height: inherit !important;
 }
+.popoverBtn{
+  height: 4vh;
+  width: 1vw;
+  margin-top: 26px !important;
+}

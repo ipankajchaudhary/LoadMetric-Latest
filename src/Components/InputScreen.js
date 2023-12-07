@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
-// import { useNavigate } from "react-router-dom";
 import Select from 'react-select'
 
-// import './InputScreen.css'
 
 const InputScreen = ({ handleFormSubmit }) => {
-  // const navigate = useNavigate();
   const [selectedFiles, setSelectedFiles] = useState('') 
 
   const [formData, setFormData] = useState({

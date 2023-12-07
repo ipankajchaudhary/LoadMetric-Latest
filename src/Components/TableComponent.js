@@ -156,7 +156,7 @@ const TableComponent = ({ response, formData }) => {
     <div className="container mt-5" style={{ maxWidth: 'fit-content' }}>
       <div className="Maindropdowncontainer d-flex justify-content-around">
         <div className="DropDownContainer mx-4">
-          <div className="DropdownLabel"> Measure</div>
+          <div className="DropdownLabel mx-2"> Measure</div>
           <div className="Dropdown">
             <select
               value={selectedMeasure}
@@ -173,7 +173,7 @@ const TableComponent = ({ response, formData }) => {
           </div>
         </div>
         <div className="DropDownContainer mx-4">
-          <div className="DropdownLabel">Dimension </div>
+          <div className="DropdownLabel mx-2">Dimension </div>
           <div className="Dropdown">
             <select
               value={selectedDimension}
@@ -190,7 +190,7 @@ const TableComponent = ({ response, formData }) => {
           </div>
         </div>
         <div className="DropDownContainer mx-4">
-          <div className="DropdownLabel">Report </div>
+          <div className="DropdownLabel mx-2">Report </div>
           <div className="Dropdown">
             <select
               value={selectedReport}
@@ -207,7 +207,7 @@ const TableComponent = ({ response, formData }) => {
           </div>
         </div>
         <div className="DropDownContainer mx-4">
-          <div className="DropdownLabel">Page </div>
+          <div className="DropdownLabel mx-2">Page </div>
           <div className="Dropdown">
             <select
               value={selectedPage}
@@ -224,7 +224,7 @@ const TableComponent = ({ response, formData }) => {
           </div>
         </div>
         <div className="DropDownContainer mx-4">
-          <div className="DropdownLabel">Visual </div>
+          <div className="DropdownLabel mx-2">Visual </div>
           <div className="Dropdown">
             <select
               value={selectedVisual}
@@ -240,77 +240,11 @@ const TableComponent = ({ response, formData }) => {
             </select>
           </div>
         </div>
-      </div>
-      {/* <div className="dropdowns p-10">
-        <select
-          value={selectedMeasure}
-          onChange={handleMeasureChange}
-          className="mx-2"
-        >
-          <option value="">Measures</option>
-          {measures.map((measure, index) => (
-            <option key={index} value={measure}>
-              {measure}
-            </option>
-          ))}
-        </select>
-
-        <select
-          value={selectedDimension}
-          onChange={handleDimensionChange}
-          className="mx-2"
-        >
-          <option value="">Dimensions</option>
-          {dimensions.map((dimension, index) => (
-            <option key={index} value={dimension}>
-              {dimension}
-            </option>
-          ))}
-        </select>
-
-        <select
-          value={selectedReport}
-          onChange={handleReportChange}
-          className="mx-2"
-        >
-          <option value="">Reports</option>
-          {reports.map((report, index) => (
-            <option key={index} value={report}>
-              {report}
-            </option>
-          ))}
-        </select>
-
-        <select
-          value={selectedPage}
-          onChange={handlePageChange}
-          className="mx-2"
-        >
-          <option value="">Pages</option>
-          {pages.map((page, index) => (
-            <option key={index} value={page}>
-              {page}
-            </option>
-          ))}
-        </select>
-
-        <select
-          value={selectedVisual}
-          onChange={handleVisualChange}
-          className="mx-2"
-        >
-          <option value="">Visuals</option>
-          {visuals.map((visual, index) => (
-            <option key={index} value={visual}>
-              {visual}
-            </option>
-          ))}
-        </select>
         <Button
           aria-describedby={id}
           variant="contained"
           onClick={handleClick}
-          className="mx-2"
+          className="mx-2 popoverBtn"
         >
           <IconButton>
             <FilterListIcon />
@@ -327,37 +261,38 @@ const TableComponent = ({ response, formData }) => {
             horizontal: 'left'
           }}
         >
-          <Typography sx={{ p: 2 }}>
+          <Typography sx={{ p: 2 }} className='d-flex flex-column'>
 
             <label>
               <input
                 type="checkbox"
                 checked={filterthresholdCheckboxFlag}
                 onChange={handlethresholdCheckboxChange}
+                className='mx-2'
               />
               Above Threshold
             </label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label>
               <input
                 type="checkbox"
                 checked={filterdimensionCheckboxFlag}
                 onChange={handledimensionCheckboxChange}
+                className='mx-2'
               />
               Measure With Dimensions
             </label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label>
               <input
                 type="checkbox"
                 checked={filtervisualCheckboxFlag}
                 onChange={handlevisualCheckboxChange}
+                className='mx-2'
               />
               Measure With Visuals
             </label>
           </Typography>
         </Popover>
-      </div> */}
+      </div>
       <div className="cards">
         <div className="carD px-5">
           <div className="card total_measures  rounded-0 ">
